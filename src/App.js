@@ -1,17 +1,15 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 import { FiSettings } from 'react-icons/fi';
 
-import { Navbar, Footer, Sidebar, ThemeSettings } from './components';
+import { Navbar, Sidebar, ThemeSettings } from './components';
 import {
   Ecommerce,
   Orders,
   Calendar,
   Employees,
-  Stacked,
-  Pyramid,
   Customers,
   Kanban,
   Area,
@@ -19,7 +17,6 @@ import {
   Pie,
   Financial,
   ColorPicker,
-  ColorMapping,
   Editor,
   Line,
 } from './pages';
@@ -89,9 +86,9 @@ const App = () => {
               <Route path='/bar' element={<Bar />} />
               <Route path='/pie' element={<Pie />} />
               <Route path='/financial' element={<Financial />} />
-              <Route path='/color-mapping' element={<ColorMapping />} />
+              {/* <Route path='/color-mapping' element={<ColorMapping />} />
               <Route path='/pyramid' element={<Pyramid />} />
-              <Route path='/stacked' element={<Stacked />} />
+              <Route path='/stacked' element={<Stacked />} /> */}
             </Routes>
           </div>
         </div>

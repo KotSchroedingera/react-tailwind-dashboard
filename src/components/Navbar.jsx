@@ -3,11 +3,11 @@ import { AiOutlineMenu } from 'react-icons/ai';
 import { FiShoppingCart } from 'react-icons/fi';
 import { BsChatLeft } from 'react-icons/bs';
 import { RiNotification3Line } from 'react-icons/ri';
-import { MdKeyboardArrowDown, MdKeyboardArrowLeft } from 'react-icons/md';
+import { MdKeyboardArrowDown } from 'react-icons/md';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
 import avatar from '../data/avatar.jpg';
-import { Cart, Chat, Notification, UserProfile } from '.';
+import { Cart, Chat, Notification } from '.';
 import { useStateContext } from '../contexts/ContextProvider';
 
 const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
@@ -29,10 +29,8 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
 
 const Navbar = () => {
   const {
-    activeMenu,
     setActiveMenu,
     isClicked,
-    setIsClicked,
     handleClick,
     setScreenSize,
     screenSize,
@@ -48,6 +46,7 @@ const Navbar = () => {
     return () => {
       window.removeEventListener('resize', handleResize);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -56,6 +55,7 @@ const Navbar = () => {
     } else {
       setActiveMenu(true);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [screenSize]);
 
   return (
@@ -105,7 +105,7 @@ const Navbar = () => {
         {isClicked.cart && <Cart />}
         {isClicked.chat && <Chat />}
         {isClicked.notification && <Notification />}
-        {isClicked.userProfile && <UserProfile />}
+        {/* {isClicked.userProfile && <UserProfile />} */}
       </div>
     </div>
   );

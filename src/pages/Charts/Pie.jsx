@@ -6,14 +6,12 @@ import {
   AccumulationSeriesDirective,
   PieSeries,
   Inject,
-  Legend,
   AccumulationLegend,
   AccumulationTooltip,
   AccumulationDataLabel,
 } from '@syncfusion/ej2-react-charts';
 import { pieChartData } from '../../data/dummy';
 import { useStateContext } from '../../contexts/ContextProvider';
-import { Tooltip } from '@syncfusion/ej2-react-popups';
 
 const Pie = () => {
   const { currentMode } = useStateContext();
