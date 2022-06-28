@@ -1,6 +1,7 @@
 # Dashboard on React
 
-Прототип админ-панели с темизацией.
+Прототип админ-панели с темизацией.  
+https://react-tailwind-dashboard.vercel.app/
 
 ## Команды
 
